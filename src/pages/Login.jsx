@@ -18,7 +18,7 @@ function Login() {
             formData.append("password", password);
 
             const response = await fetch(
-                "http://webapp353621.ip-45-79-142-173.cloudezapp.io/api/login",
+                "https://webapp353621.ip-45-79-142-173.cloudezapp.io/api/login",
                 {
                 method: 'POST',
                 mode:"cors",
