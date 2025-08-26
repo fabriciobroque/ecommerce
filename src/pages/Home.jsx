@@ -1,9 +1,11 @@
+import { MinhaNavbar } from "../componentes/MinhaNavbar";
 
 function Home() {
 
   return (
     <div>
-      <p>HOME</p>
+      <MinhaNavbar />
+      <p>Bem Vindo</p>
     </div>
   );
 }
