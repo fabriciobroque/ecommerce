@@ -42,9 +42,9 @@ function MinhaNavbar() {
           <Nav className="me-auto">
             <Nav.Link href="/" className="text-white">Home</Nav.Link>
             <Nav.Link href="/produtos" className="text-white">Produto</Nav.Link>
-            <Nav.Link href="/login" className="text-white">Fazer Login</Nav.Link>
           </Nav>
         </Container>
+        <Nav.Link href="/login" className="text-white justify-content-end px-4">Fazer Login</Nav.Link>
       </Navbar>
       );
     }
