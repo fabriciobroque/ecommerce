@@ -2,14 +2,18 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function MinhaNavbar() {
 
+  const navigate = useNavigate();
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [token, setToken] = useState("");
 
   function buscarDadosUsuario() {
+
+    
     const nomeUsuario = localStorage.getItem("nomeUsuario");
     const emailUsuario = localStorage.getItem("emailUsuario");
     const token = localStorage.getItem("token");
@@ -23,7 +27,7 @@ function MinhaNavbar() {
     localStorage.removeItem("nomeUsuario");
     localStorage.removeItem("emailUsuario");
     localStorage.removeItem("token");
-    window.location.reload();
+    navigate("/login");
   }
 
   useEffect(() => {
