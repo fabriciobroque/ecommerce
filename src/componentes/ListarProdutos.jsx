@@ -1,7 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import api from "../_service/api"
-import { Cards } from "./cards";
+import { Cards } from "./Cards";
+import { Container, Row, Col } from "react-bootstrap";
 
 function ListarProdutos() {
 
@@ -29,19 +30,21 @@ console.log('Produtos', produtos);
 
 return (
     <>
-        <h1>Lista Produtos</h1>
-        {produtos.map((produto) =>{
-         return (  
-            <>
-            <Cards
-                name = {produto.title}
-                preco = {produto.price}
-                img = {produto.image}
-            />
-           
-            </>
-         );
-        })}
+       <h1>Lista Produtos</h1>
+       <br />
+       <Container className="d-flex justify-content-center align-items-center min-vh-100">
+            <Row  >
+                {produtos.map((p) => (
+                    <Col   md={4} sm={6} xs={12} className="d-flex justify-content-center align-items-center">
+                    <Cards 
+                     name={p.title} 
+                     preco={p.price}
+                     img={p.image}
+                     />
+                    </Col>
+                ))}
+            </Row>
+       </Container>
     </>
 )
 

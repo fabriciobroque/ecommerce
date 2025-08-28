@@ -41,10 +41,10 @@ function MinhaNavbar() {
           <Navbar.Brand className="text-white">E-Commerce</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/" className="text-white">Home</Nav.Link>
-            <Nav.Link href="/produtos" className="text-white">Produto</Nav.Link>
+            <Nav.Link href="/produtos" className="text-white">Produtos</Nav.Link>
           </Nav>
         </Container>
-        <Nav.Link href="/login" className="text-white justify-content-end px-4">Fazer Login</Nav.Link>
+        <Nav.Link href="/login" className="text-white justify-content-end px-4">Login</Nav.Link>
       </Navbar>
       );
     }
@@ -56,7 +56,7 @@ function MinhaNavbar() {
           <Navbar.Brand className="text-white">E-Commerce</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/" className="text-white">Home</Nav.Link>
-            <Nav.Link href="/produtos" className="text-white">Produto</Nav.Link>
+            <Nav.Link href="/produtos" className="text-white">Produtos</Nav.Link>
           </Nav>
         </Container>
           <Navbar.Text className='text-white justify-content-end px-2'>{nome}</Navbar.Text>
