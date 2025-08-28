@@ -37,6 +37,7 @@ return (
                 {produtos.map((p) => (
                     <Col   md={4} sm={6} xs={12} className="d-flex justify-content-center align-items-center">
                     <Cards 
+                     idProduto={p.id}
                      name={p.title} 
                      preco={p.price}
                      img={p.image}

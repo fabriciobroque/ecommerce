@@ -1,8 +1,9 @@
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { CarrinhoContext } from '../hooks/CarrinhoContext';
 
 function MinhaNavbar() {
 
@@ -10,6 +11,8 @@ function MinhaNavbar() {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [token, setToken] = useState("");
+
+  const { listaProdutos } = useContext(CarrinhoContext);
 
   function buscarDadosUsuario() {
 
@@ -59,6 +62,7 @@ function MinhaNavbar() {
             <Nav.Link href="/produtos" className="text-white">Produtos</Nav.Link>
           </Nav>
         </Container>
+          <Nav.Link href="/carrinho" className="text-white justify-content-end px-4">Carrinho ({listaProdutos.length})</Nav.Link>
           <Navbar.Text className='text-white justify-content-end px-2'>{nome}</Navbar.Text>
           <Navbar.Text className='text-white px-2 '>{email}</Navbar.Text>
           <Nav.Link onClick={sair} className="text-white px-2">Sair</Nav.Link>
