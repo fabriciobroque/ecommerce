@@ -1,8 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import api from "../_service/api"
-import { Cards } from "./Cards";
 import { Container, Row, Col } from "react-bootstrap";
+import { Cards } from "./Cards";
 
 function ListarProdutos() {
 
