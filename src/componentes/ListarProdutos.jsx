@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import api from "../_service/api"
 import { Container, Row, Col } from "react-bootstrap";
-import { Cards } from "./Cards.jsx";
+import { Cards } from '../componentes/Cards';
 
 function ListarProdutos() {
 
